@@ -1,3 +1,10 @@
+/***
+ * The base class which provides a webdriver instance based on the configuration set.
+ * @project smava-Selenium
+ * @author Veeragh.Goudar
+ * @since Sep 17, 2017
+ */
+
 package de.smava;
 
 import java.io.FileInputStream;
@@ -24,7 +31,7 @@ public class Base {
 	public WebDriver getDriver() {
 		return driver;
 	}
-
+/* Method to read the configuration file */
 	public void readPropertyFile() throws IOException {
 		try {
 			configFile = new Properties();
@@ -36,7 +43,8 @@ public class Base {
 			e.printStackTrace();
 		}
 	}
-
+/*	Creates the webdriver instance based on the browser type set in the config file
+ *  Also, opens the browser with the url set in the config file*/ 
 	@BeforeClass
 	public void setup() throws IOException {
 		readPropertyFile();

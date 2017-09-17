@@ -1,3 +1,10 @@
+/***
+ * The class provides all the actions which could be performed on the Result page
+ * The class extends ResultPage_page class which provides all the web elements
+ * @project smava-Selenium
+ * @author Veeragh.Goudar
+ * @since Sep 17, 2017
+ */
 package de.smava.business;
 
 import org.openqa.selenium.WebDriver;
@@ -10,6 +17,9 @@ public class ResultPage_methods extends ResultPage_page {
 		super(driver);
 	}
 
+	/*The method verifies whether the use of credit selected in the landing page
+	 * appears on the result page as well. 
+	 * Returns true if the text is matched, else returns false */
 	public Boolean verifyQuote(String creditAmount, String period, String use) {
 		System.out.println("Entering verifyQuote");
 		Boolean flag = false;
@@ -36,6 +46,7 @@ public class ResultPage_methods extends ResultPage_page {
 	public Boolean verifyIfErrorSectionIsDisplayed(){
 		return (getErrorSection().isDisplayed());
 	}
+	/*Verifies for the error text which appears on the screen*/
 	public Boolean verifyForUserAccessDenial(){
 		System.out.println(getErrorSection().getText());
 		//if(getErrorSection().getText().equalsIgnoreCase("Ihre Angaben zum Einloggen sind ungültig. Bitte versuchen Sie es erneut. Bitte beachten Sie, dass Ihr Zugang bei 3 Fehlversuchen von uns vorläufig gesperrt wird.")){

@@ -1,3 +1,9 @@
+/***
+ * The Landing screen page object class. This provides all the web elements of landing page.
+ * @project smava-Selenium
+ * @author Veeragh.Goudar
+ * @since Sep 17, 2017
+ */
 package de.smava.page;
 
 import org.openqa.selenium.By;
@@ -6,9 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import de.smava.Base;
-
-public class LandingPage_page extends Base {
+public class LandingPage_page {
 	public WebDriver driver;
 	public LandingPage_page(WebDriver driver) {
 		this.driver = driver;
@@ -57,11 +61,10 @@ public class LandingPage_page extends Base {
 	public WebElement getLoginButton() {
 		return driver.findElement(loginButton);
 	}
+	/*Dynamically generates xpath based on the option required*/
 	private String generateXpathForUseDropDown(String option){
 		String forUseOptionxpath;
 		forUseOptionxpath = ".//*[@id='myselect3']/div/div[2]/div[contains(string(), '"+option+"')]";
 		return forUseOptionxpath;
-		
 	}
-	
 }

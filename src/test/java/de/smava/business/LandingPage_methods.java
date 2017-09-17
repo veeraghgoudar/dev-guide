@@ -1,3 +1,11 @@
+/***
+ * The class provides all the actions which could be performed in the landing page
+ * The class extends LandingPage_page class which provides all the web elements
+ * @project smava-Selenium
+ * @author Veeragh.Goudar
+ * @since Sep 17, 2017
+ */
+
 package de.smava.business;
 
 
@@ -24,7 +32,6 @@ public class LandingPage_methods extends LandingPage_page{
 		selectOptionsForUse(use);
 		getCompareButton().click();
 		System.out.println("END of getQuote Operation");
-		
 	}
 	
 	public void signIn(String username, String password){

@@ -1,3 +1,10 @@
+/**
+ * The Result screen page object class. The provides all the elements of result page.
+ * @project smava-Selenium
+ * @author Veeragh.Goudar
+ * @since Sep 17, 2017
+ */
+
 package de.smava.page;
 
 import org.openqa.selenium.By;
@@ -7,9 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import de.smava.Base;
-
-public class ResultPage_page extends Base {
+public class ResultPage_page{
 
 	public WebDriver driver;
 

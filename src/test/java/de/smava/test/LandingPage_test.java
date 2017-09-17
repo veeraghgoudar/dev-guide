@@ -64,4 +64,19 @@ public class LandingPage_test extends Base {
 		} catch (Exception e) {
 			e.printStackTrace(); }
 	}
+	
+	/* Test case for the Quote of 2750 for the period of 24 Months for living.
+	 * Also, verifies whether by clicking on Next & verifies whether the page is loaded*/
+	@Test
+	public void Test_0004_getLoanAmount_2000_12_Wohnen() {
+		System.out.println("Executing SECOND test CASE");
+		try {
+			landingScreen.getQuote("2000", "12", "Wohnen");
+			resultScreen.clickNextButton();
+			Assert.assertTrue(resultScreen.verifyWhetherPersonDetailsDisplayed());
+			resultScreen.goToHomeScreen();
+		} catch (Exception e) {
+			e.printStackTrace(); }
+	}
+	
 }

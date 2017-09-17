@@ -51,8 +51,10 @@ public class ResultPage_methods extends ResultPage_page {
 		System.out.println(getErrorSection().getText());
 		//if(getErrorSection().getText().equalsIgnoreCase("Ihre Angaben zum Einloggen sind ungültig. Bitte versuchen Sie es erneut. Bitte beachten Sie, dass Ihr Zugang bei 3 Fehlversuchen von uns vorläufig gesperrt wird.")){
 		if(getErrorSection().getText().equalsIgnoreCase("Der Zugang für diesen Benutzernamen ist deaktiviert.")){
+			goToHomeScreen();
 			return true;
 		}else{
+			goToHomeScreen();
 			return false; }
 	}
 	public void  goToHomeScreen() {

@@ -1,10 +1,11 @@
 # dev-guide
 Introduction
-The project provides a basic structure of Page object model framework. It also used TestNG framework to run tests and generate Reports. The project uses maven to download the dependencies.
+
+The project provides a basic structure of Page object model framework for Selenium. It is also integrated with TestNG framework to run tests and generate Reports. The project uses maven to download the dependencies.
 
 
 Software Requirements 
-Software                Requirements
+
 Operating system        Linux(Ubuntu), Windows 7, Windows 10
 IDE						Eclipse
 JAVA-version			jdk 8

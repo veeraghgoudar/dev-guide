@@ -22,28 +22,28 @@ public class LandingPage_methods extends LandingPage_page{
 	}
 	
 	public void getQuote(String creditAmount, String period, String use) throws InterruptedException{
-		System.out.println("Entering Get Quote");
-		getCreditAmountDropDown().sendKeys(creditAmount);
-		getCreditAmountDropDown().sendKeys(Keys.RETURN);
-		getPeriodDropDown().sendKeys(period);
-		Thread.sleep(1000);
-		getPeriodDropDown().sendKeys(Keys.RETURN);
-		getUseForDropDown().click();
-		selectOptionsForUse(use);
-		getCompareButton().click();
-		System.out.println("END of getQuote Operation");
+		try{
+			getCreditAmountDropDown().sendKeys(creditAmount);
+			getCreditAmountDropDown().sendKeys(Keys.RETURN);
+			getPeriodDropDown().sendKeys(period);
+			Thread.sleep(1000);
+			getPeriodDropDown().sendKeys(Keys.RETURN);
+			getUseForDropDown().click();
+			selectOptionsForUse(use);
+			getCompareButton().click();
+		}
+		catch(Exception e){
+			e.printStackTrace(); }
 	}
 	
 	public void signIn(String username, String password){
-		System.out.println("Signing in as "+username);
 		try{
-		getLoginLink().click();
-		getUsername().sendKeys(username);
-		getPassword().sendKeys(password);
-		getLoginButton().submit();
+			getLoginLink().click();
+			getUsername().sendKeys(username);
+			getPassword().sendKeys(password);
+			getLoginButton().submit();
 		}
 		catch(Exception e){
-			System.out.println("Element not visible");
 			e.printStackTrace();
 		}
 	}

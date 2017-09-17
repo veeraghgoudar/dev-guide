@@ -32,6 +32,7 @@ public class LandingPage_test extends Base {
 	/* Test case for the Quote of 500 for the period of 48 Months for Business use*/
 	@Test
 	public void Test_0001_getLoanAmount_500_48_Gewerbe() {
+		System.out.println("Executing Test_0001_getLoanAmount_500_48_Gewerbe");
 		try {
 			landingScreen.getQuote("500", "48", "Gewerbe");
 			Assert.assertTrue(resultScreen.verifyQuote("500", "48", "Gewerbe"));
@@ -43,7 +44,7 @@ public class LandingPage_test extends Base {
 	 * Also, verifies whether by clicking on Next & verifies whether the page is loaded*/
 	@Test
 	public void Test_0002_getLoanAmount_2750_24_Wohnen() {
-		System.out.println("Executing SECOND test CASE");
+		System.out.println("Executing Test_0002_getLoanAmount_2750_24_Wohnen");
 		try {
 			landingScreen.getQuote("2750", "24", "Wohnen");
 			resultScreen.clickNextButton();
@@ -69,7 +70,7 @@ public class LandingPage_test extends Base {
 	 * Also, verifies whether by clicking on Next & verifies whether the page is loaded*/
 	@Test
 	public void Test_0004_getLoanAmount_2000_12_Wohnen() {
-		System.out.println("Executing SECOND test CASE");
+		System.out.println("Executing Test_0004_getLoanAmount_2000_12_Wohnen");
 		try {
 			landingScreen.getQuote("2000", "12", "Wohnen");
 			resultScreen.clickNextButton();

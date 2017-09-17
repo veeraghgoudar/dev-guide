@@ -38,7 +38,7 @@ public class Base {
 			FileInputStream ip = new FileInputStream(
 					"src/main/java/de/smava/config/config.properties");
 			configFile.load(ip);
-			System.out.println("load config propeties");
+			System.out.println("load config properties");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
